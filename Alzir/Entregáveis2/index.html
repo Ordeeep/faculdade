@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+  <title>Trabalho Alzir</title>
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="esquerdo">
+      <img class="logo" src="img/LOGO.png" alt="universidade icon">
+      <p>Esse trabalho foi feito usando as seguintes tecnologias: <br>HTML, CSS e JavaScript</p>
+      <p>O designer foi inspirado no figma da Rocketseat.</p>
+      <br>
+      <a href="http://www.figma.com/community/file/1220368226816658013" target="_blank">clique aqui para ver!</a>
+
+    </div>
+    <div class="direita">
+      <header>
+        <div class="infos">
+          <p>Unifor – Universidade de Fortaleza</p>
+          <p>Nome: Pedro Ivan Marques Pontes Borges</p>
+        </div>
+        <div class="themer">
+          <img class="icon" src="img/sunIcon.png" alt="sunIcon">
+        </div>
+      </header>
+      <hr>
+
+      <main>
+        <div class="primeiro">
+          <div class="p">
+            <p>Numeros primos:</p>
+            <form>
+              <label for="num1">Digite um numero inteiro:</label>
+              <input type="number" id="num1" name="num1">
+              <input placeholder="Resultado:" type="text" id="resultado" name="resultado" readonly>
+              <button type="button" onclick="numerosPrimos()">Calcular</button>
+            </form>
+          </div>
+          <div class="p">
+            <p>Fibonacci</p>
+            <form>
+              <label for="num1">Digite um numero inteiro:</label>
+              <input type="number" id="num1" name="num1">
+              <input type="text" id="resultado" name="resultado" readonly>
+              <button type="button" onclick="numerosPrimos()">Calcular</button>
+            </form>
+          </div>
+          <div class="p">
+            <p>Maximo divisor comum</p>
+            <form>
+              <label for="num1">Digite um numero inteiro:</label>
+              <input type="number" id="num1" name="num1">
+              <input type="text" id="resultado" name="resultado" readonly>
+              <button type="button" onclick="numerosPrimos()">Calcular</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="segundo">
+          <div class="p">
+            <p>Somatorio</p>
+            <form>
+              <label for="num1">Digite um numero inteiro:</label>
+              <input type="number" id="num1" name="num1">
+              <input type="text" id="resultado" name="resultado" readonly>
+              <button type="button" onclick="numerosPrimos()">Calcular</button>
+            </form>
+          </div>
+          <div class="p">
+            <p>Ordenação</p>
+            <form>
+              <label for="num1">Digite um numero inteiro:</label>
+              <input type="number" id="num1" name="num1">
+              <input type="text" id="resultado" name="resultado" readonly>
+              <button type="button" onclick="numerosPrimos()">Calcular</button>
+            </form>
+          </div>
+          <div class="p">
+            <p>Contagem</p>
+            <form>
+              <label for="num1">Digite um numero inteiro:</label>
+              <input type="number" id="num1" name="num1">
+              <input type="text" id="resultado" name="resultado" readonly>
+              <button type="button" onclick="numerosPrimos()">Calcular</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function numerosPrimos() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      if (num1 % 2 == 0) {
+        document.getElementById("resultado").value = "O numero: " + num1 + " é primo."
+      } else {
+        document.getElementById("resultado").value = "O numero: " + num1 + " não é primo."
+      }
+    }
+  </script>
+</body>
+
+</html>
