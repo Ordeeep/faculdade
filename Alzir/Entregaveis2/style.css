@@ -93,7 +93,9 @@ a{
   box-sizing: border-box;
 }
 
-
+#mdc{
+  margin-top: 37px;
+}
 
 button{
   width: 90px;
@@ -112,4 +114,8 @@ input{
   margin-top: 10px;
   border-radius: 8px;
   border: none;
+}
+
+form{
+  font-size: 12px;
 }
