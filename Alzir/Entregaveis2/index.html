@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+  <title>Trabalho Alzir</title>
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="esquerdo">
+      <img class="logo" src="img/LOGO.png" alt="universidade icon">
+      <p>Esse trabalho foi feito usando as seguintes tecnologias: <br>HTML, CSS e JavaScript</p>
+      <span>Para ver os códigos feitos em java</span>
+      <a href="http://www.figma.com/community/file/1220368226816658013" target="_blank"><strong>clique aqui!</strong></strong></a>
+
+
+      <p class="figma">O designer foi inspirado no figma da Rocketseat.</p>
+      <a href="http://www.figma.com/community/file/1220368226816658013" target="_blank"><strong>clique aqui para ver!</strong></a>
+
+    </div>
+    <div class="direita">
+      <header>
+        <div class="infos">
+          <p>Unifor – Universidade de Fortaleza</p>
+          <p>Nome: Pedro Ivan Marques Pontes Borges</p>
+        </div>
+
+      </header>
+      <hr>
+
+      <main>
+        <div class="primeiro">
+          <div class="p">
+            <p>Numeros primos:</p>
+            <form>
+              <label for="num1">Digite um numero inteiro:</label>
+              <input type="number" id="num1" name="num1">
+              <input placeholder="Resultado:" type="text" id="resultadoNumerosPrimos" name="resultadoNumerosPrimos"
+                readonly>
+              <button type="button" onclick="numerosPrimos()">Calcular</button>
+            </form>
+          </div>
+          <div class="p">
+            <p>Fibonacci</p>
+            <form>
+              <label for="num2">Digite um numeros inteiro</label>
+              <input type="number" id="num2" name="num2">
+              <input placeholder="Resultado:" type="text" id="resultadoFibonacci" name="resultadoFibonacci" readonly>
+              <button type="button" onclick="Fibonacci()">Calcular</button>
+            </form>
+          </div>
+          <div class="p">
+            <p>Maximo divisor comum</p>
+            <form>
+              <label for="mdcn1">Digite o primeiro valor</label>
+              <input type="number" id="mdcn1" name="mdcn1">
+              <br>
+              <br>
+              <label for="mdcn2">Digite o segundo valor</label>
+              <input type="number" id="mdcn2" name="mdcn2">
+              <input placeholder="Resultado:" type="text" id="resultadoMdc" name="resultadoMdc" readonly>
+              <button type="button" id="mdc" onclick="Mdc()">Calcular</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="segundo">
+          <div class="p">
+            <p>Somatorio</p>
+            <form>
+              <label for="Somatorioinput">Digite uma sequencia de numeros, <strong>separando eles com um espaço!</strong></label>
+              <input type="text" id="Somatorioinput" name="Somatorioinput">
+              <input placeholder="Resultado:" type="text" id="resultadoSomatorio" name="resultadoSomatorio" readonly>
+              <button type="button" onclick="Somatorio()">Calcular</button>
+            </form>
+          </div>
+          <div class="p">
+            <p>Ordenação</p>
+            <form>
+              <label for="OrdInput">Digite uma sequencia de numeros:</label>
+              <input type="text" id="OrdInput" name="OrdInput">
+              <input placeholder="Resultado:" type="text" id="resultadoOrdenacao" name="resultadoOrdenacao" readonly>
+              <button type="button" onclick="Ordenacao()">Calcular</button>
+            </form>
+          </div>
+          <div class="p">
+            <p>Contagem</p>
+            <form>
+              <label for="ContagemInput1">Digite o numero de alunos:</label>
+              <input type="number" id="ContagemInput1" name="ContagemInput1">
+              <input placeholder="Resultado:" type="text" id="resultadoContagem" name="resultadoContagem" readonly>
+              <button type="button"  onclick="Contagem()">Calcular</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function numerosPrimos() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      if (num1 % 2 == 0) {
+        document.getElementById("resultadoNumerosPrimos").value = "O numero: " + num1 + " é primo."
+      } else {
+        document.getElementById("resultadoNumerosPrimos").value = "O numero: " + num1 + " não é primo."
+      }
+    }
+    function Fibonacci() {
+      var n = parseFloat(document.getElementById("num2").value);
+
+      var valorA = 0;
+      var valorB = 1;
+      var valorC;
+      var fibonacciResultado = (valorA + "," + valorB);
+
+      for (i = 3; i <= n; i++) {
+        valorC = valorA + valorB;
+        fibonacciResultado += ("," + valorC);
+        valorA = valorB;
+        valorB = valorC;
+      }
+      document.getElementById("resultadoFibonacci").value = fibonacciResultado
+    }
+
+    function Mdc() {
+      var ValorMDCa = parseFloat(document.getElementById("mdcn1").value);
+      var ValorMDCb = parseFloat(document.getElementById("mdcn2").value);
+      for (let i = ValorMDCa; i > 0; i--) {
+        if (ValorMDCa % i === 0 && ValorMDCb % i === 0) {
+          document.getElementById("resultadoMdc").value = i;
+          break;
+        }
+      }
+    }
+    function Somatorio() {
+      var sequencia = document.getElementById("Somatorioinput").value;
+      var numeros = sequencia.split(" ").map(Number);
+
+      var soma = numeros.reduce(function (a, b) {
+        return a + b;
+      }, 0);
+      document.getElementById("resultadoSomatorio").value = soma;
+    }
+    function Ordenacao() {
+      var sequencia = document.getElementById("OrdInput").value;
+
+      var numeros = sequencia.split(" ").map(Number);
+
+      numeros.sort(function (a, b) {
+        return a - b;
+      });
+
+      var sequenciaOrdenada = numeros.join(" ");
+
+      document.getElementById("resultadoOrdenacao").value = sequenciaOrdenada;
+    }
+    function Contagem() {
+      var x = document.getElementById("ContagemInput1").value;
+      if (x === "") {
+        alert("Por favor, digite uma sequência de números!");
+        return;
+      }
+      var nota;
+      var cont = 0;
+      var i = 0;
+
+      while (i < x) {
+        nota = prompt("Indique cada nota individualmente");
+
+        if (nota >= 6) {
+          cont = cont + 1;
+        }
+
+        i = i + 1;
+      }
+      document.getElementById("resultadoContagem").value = ("Passaram: " + cont + " alunos.");
+    }
+
+  </script>
+</body>
+
+</html>
