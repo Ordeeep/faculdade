@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Age calculater</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="calculadora">
+      <form action="">
+        <div id="quads-inputs">
+          <div class="data-inputs">
+            <label for="day">Day</label>
+            <input type="number" name="day" id="day" placeholder="DD">
+          </div>
+          <div class="data-inputs">
+            <label for="month">Month</label>
+            <input type="number" name="month" id="month" placeholder="MM">
+          </div>
+          <div class="data-inputs">
+            <label for="year">Year</label>
+            <input type="number" name="year" id="year" placeholder="YYYY">
+          </div>
+        </div>
+        <div id="img">
+          <button type="button" onclick="calcularDias()">
+          <img src="assets/images/icon-arrow.svg" id="arrowIcon" alt="">
+          </button>
+        </div>
+      </form>
+      <div id="resultados">
+        <div class="slaTeste">
+          <span id="yearsResult">--</span>
+          <p>years</p>
+        </div>
+        <div class="slaTeste">
+          <span id="monthsResult">--</span>
+          <p>months</p>
+        </div>
+        <div class="slaTeste">
+        <span id="daysResult">--</span>
+        <p>days</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+  <script src="assets/script/script.js"></script>
+</body>
+</html>
