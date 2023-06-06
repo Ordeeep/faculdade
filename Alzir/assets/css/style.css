@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+* {
+  font-family: 'poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: rgb(234, 243, 252);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%px;
+  height: 400px;
+}
+#calculadora{
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 50px;
+  padding: 45px;
+  width: 600px;
+  border-radius: 0px 0px 150px 0px;
+}
+#quads-inputs {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  display: flex;
+  gap: 20px;
+  color: hsl(0, 1%, 44%);
+}
+
+.data-inputs label {
+  display: block;
+  font-size: 12px;
+}
+
+.data-inputs input {
+  border-radius: 8px;
+  border: 1px solid hsl(0, 0%, 86%);
+  width: 125px;
+  padding: 10px 15px;
+  font-size: 32px;
+}
+
+.data-inputs input::placeholder {
+  color: hsl(0, 1%, 44%);
+}
+button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#arrowIcon {
+  display: flex;
+  justify-content: end;
+  border-radius: 30px;
+  padding: 15px;
+  width: 64px;
+  background-color: hsl(259, 100%, 65%)
+}
+.slaTeste {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 80px;
+  line-height: 90px;
+}
+
+.slaTeste span {
+  color: hsl(259, 100%, 65%);
+  letter-spacing: 7px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.slaTeste p {
+  font-weight: 800;
+  font-style: italic;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /* Chrome, Safari, Opera */
+  margin: 0;
+  /* Opcional - remover margens se necessário */
+}
+#img{
+  margin: 10px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
